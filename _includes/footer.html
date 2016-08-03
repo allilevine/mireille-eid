@@ -1,0 +1,16 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+  {% if page.backlink %}
+    <a href="{{site.url}}{{page.backlink}}">Back to {{page.backlinkname}}</a>
+  {% endif %}
+  </div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/js/fresco.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/fresco/fresco.css"/>
+<script type='text/javascript'>
+  skin: 'fresco', ui: 'inside';
+</script>
+</footer>

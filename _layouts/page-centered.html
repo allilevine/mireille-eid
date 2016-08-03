@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="gray_stripe"><p>{{ site.title }}</p></div>
+<article class="post">
+
+  <header class="post-header gray_stripe">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="post-content">
+    <center>{{ content }}</center>
+  </div>
+
+</article>
+
+<div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">&laquo; The previous day</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">The next day &raquo;</a>
+  {% endif %}
+</div>

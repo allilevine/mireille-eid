@@ -1,0 +1,703 @@
+$brand-color: #666;
+$text-color: #303030;
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+
+    &.Scientist {
+      background: #000;
+    }
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: underline;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: #e41313;
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+*/
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: 81%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+//*** From WordPress ***//
+@font-face {
+    font-family: 'museo300';
+    src: url('../assets/museo300-regular-webfont.eot');
+    src: url('../assets/museo300-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/museo300-regular-webfont.woff') format('woff'),
+         url('../assets/museo300-regular-webfont.ttf') format('truetype'),
+         url('../assets/museo300-regular-webfont.svg#museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'geosanslightregular';
+    src: url('../assets/geosanslight-webfont.eot');
+    src: url('../assets/geosanslight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/geosanslight-webfont.woff') format('woff'),
+         url('../assets/geosanslight-webfont.ttf') format('truetype'),
+         url('../assets/geosanslight-webfont.svg#geosanslightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/**** General *****/
+* { margin: 0px; padding: 0px; }
+html, body { font-family:'arial'; font-size: 14px;}
+input, select, textarea { font-family: arial; font-size: 12px; color: #fff; }
+body { background:#fff;font-family: Arial, Helvetica, sans-serif; }
+img { border: 0px; }
+a, input { outline: none; }
+
+/**** global classes *****/
+.clear { clear: both; height: 0px; }
+
+/****  wrapper *****/
+.cntr{ margin:0 auto; width:1063px; position:relative }
+
+/**** homepage ****/
+
+#wrapper { position: relative; display: block; width: 100%; min-height: 100%;}
+.sci_bg { background:#030101 !important ; overflow:hidden}
+
+.leaf_r{position:absolute; top:48px; right:-150px; background:url(../images/Leaf-falling-grey-on-white.gif) no-repeat; height:450px; width:75px}
+
+.leaf_l{position:absolute; top:48px; left:-150px;}
+
+.homepage-identity {
+  position: absolute;
+
+  p{ font-family: 'museo300'; font-size:50px; line-height:50px}
+
+  a {
+    text-decoration: none;
+    color: #6e6e6e;
+  }
+
+  a p.new-label span{
+   position: relative;
+  }
+  &:hover a p.new-label span{
+   display: none;
+  }
+  &:hover a p.new-label:after{
+   color:#e41313;
+  }
+}
+
+.artst{
+   top: 57px;
+   left: 45%;
+   &:hover a p.new-label:after{
+    content: 'Poet';
+   }
+}
+
+.sci{
+   top: 155px;
+   left: 10%;
+   &:hover a p.new-label:after{
+    content: 'Artist';
+   }
+}
+
+.mig{
+   top: 155px;
+   right: 10%;
+   &:hover a p.new-label:after{
+    content: 'Thinker';
+   }
+}
+
+.mir{ position:absolute; top:253px; left:40%; }
+.mir p{ font-family: 'geosanslightregular'; font-size:50px; line-height:50px}
+.mir p a{ text-decoration:none; color:#e41313}
+
+.mot{
+   top: 354px;
+   left: 10%;
+   &:hover a p.new-label:after{
+    content: 'Migrant';
+   }
+}
+
+.thi{
+   top: 354px;
+   right: 10%;
+   &:hover a p.new-label:after{
+    content: 'Mother';
+   }
+}
+
+.poe{
+   top: 452px;
+   left: 46%;
+   &:hover a p.new-label:after{
+    content: 'Scientist';
+   }
+}
+
+/**** grey page header ****/
+
+.gray_stripe{ float:left; width:100%; background:#979797; margin:1px 0px 1px 0px }
+.gray_stripe p{font-family: 'museo300'; font-size:20px; padding:4px 0px 4px 12px; color:#fff; margin-bottom: 0; }
+.fst{ margin-top:53px}
+
+/**** Pages ****/
+
+.sci_img{ float:left; margin:70px 0px 0px 0px; width:1063px;}
+
+.artist{ float:left; margin:0px 0px 0px 56px}
+.atr_img_bx { float: left; width:153px; margin:56px 19px 0px 19px; min-height:162px;}
+.atr_img_bx img { border:3px solid #d5cece;margin:0px 0px 8px 0px}
+.atr_img_bx p { font-family: 'museo300'; font-size:15px; text-align:center; line-height:19px;}
+.atr_img_bx p a{ text-decoration:none; color:#303030}
+.atr_img_bx p a:hover{ text-decoration:none; color:#e41313}
+
+
+.migrant{float:left; margin:0px 0px 40px 0px; width:100%;}
+.migrant h3{font-family: 'museo300'; font-size:18px; padding:39px 0px 24px 0px ; color:#303030; font-weight:normal;}
+
+.mir_l{ float:left; margin:0px 0px 0px 0px; width:205px;}
+.mir_l img{ border:2px solid #979797}
+.mir_r{ float:right; margin:0px 5px 0px 0px; width:835px;}
+.mir_r p { font-family: 'museo300'; font-size:15px; color:#303030; line-height:19px; text-align:justify}
+.mir_r p a{ text-decoration:none; color:#ed0000}
+.mir_r p a:hover{ text-decoration:none; color:#303030}
+
+.migrant table { border:1px solid #cdcdcd; margin:20px 0px 0px 0px;}
+.migrant table tr td { font-family: 'museo300'; font-size:16px; color:#303030 }
+.migrant table tr td a { text-decoration:none;color:#303030; line-height:28px; padding-left:15px; }
+.migrant table tr td a:hover { color:#ed0000}
+/*.bdr_r{ border-right:1px solid #cdcdcd }
+.bdr_b{ border-bottom:1px solid #cdcdcd }
+*/
+table td { border:none !important}
+
+
+.btm_txt { float:right; width:1000px; margin:15px 0px 0px 0px}
+.btm_txt p { font-family: 'museo300'; font-size:15px; color:#303030; line-height:21px; text-align:justify}
+.btm_txt p a{  color:#303030}
+.btm_txt p a:hover{ text-decoration:none; color:#ed0000}
+
+
+.poet{float:left; margin:0px 0px 0px 0px; width:100%;}
+.poet table { border:1px solid #cdcdcd; margin:20px 0px 0px 0px;}
+.poet table tr td { font-family: 'museo300'; font-size:16px; color:#303030; text-align:center }
+.poet table tr td a { text-decoration:none;color:#303030; line-height:28px; padding-left:15px; }
+.poet table tr td a:hover { color:#ed0000}
+
+
+.mother{float:left; margin:0px 0px 60px 0px; width:100%;}
+.mother h3{font-family: 'museo300'; font-size:18px; padding:15px 0px 15px 0px ; color:#303030; font-weight:normal;}
+.mother h3 a{ text-decoration:none; color:#ed0000 ; padding-right:20px;}
+.mother h3 a:hover{ text-decoration:none; color:#303030}
+
+.mother h4{font-family: 'museo300'; font-size:13px; padding:5px 0px 5px 0px ; color:#303030; font-weight:normal;}
+.mother h4 a{ text-decoration:none; color:#ed0000 ; padding-right:20px;}
+.mother h4 a:hover{ text-decoration:none; color:#303030}
+
+.mother p { font-family: 'museo300'; font-size:15px; color:#303030; line-height:19px; text-align:justify}
+.mother p a{ text-decoration:none; color:#ed0000}
+.mother p a:hover{ text-decoration:none; color:#303030}
+
+
+.thinker{float:left; margin:0px 0px 60px 0px; width:100%;}
+.thinker h3{font-family: 'museo300'; font-size:18px; padding:15px 0px 15px 0px ; color:#303030; font-weight:normal;}
+.thinker h3 a{ text-decoration:none; color:#ed0000 ; padding-right:20px;}
+.thinker h3 a:hover{ text-decoration:none; color:#303030}
+
+.thinker p span{font-family: 'museo300'; font-size:13px; padding:5px 0px 5px 0px ; color:#303030; font-weight:normal;}
+.thinker p span a{ text-decoration:none; color:#6e6e6e ; }
+.thinker p  span a:hover{ text-decoration:none; color:#e41313}
+.thinker p { font-family: 'museo300'; font-size:15px; color:#303030; line-height:19px; text-align:justify}
+.thinker p a{ text-decoration:none; color:#ed0000}
+.thinker p a:hover{ text-decoration:none; color:#303030}
+
+.h_line{ width:100%; /*border-bottom:1px solid #cdcdcd; margin:20px 0px 20px 0px*/display: block;
+-webkit-margin-before: 0.5em;
+-webkit-margin-after: 0.5em;
+-webkit-margin-start: auto;
+-webkit-margin-end: auto;
+border-style: inset;
+border-width: 1px;}
+#newpage{position:relative; min-height:550px; }
+blockquote {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 40px;
+-webkit-margin-end: 40px;
+}
+
+.motherpages p{ font-family:Arial, Helvetica, sans-serif !important; font-size:x-small !important}
+.Arial {
+text-align: left;
+}
+
+ul#portfolio-list li { margin-top:20px; width:142px!important; margin-left:14.5px; margin-right:14.5px; min-height:190px!important  }
+.grid_3 							{ width:260px; margin:0 20px 0 20px; overflow:hidden; float:left; display:inline; }
+
+
+.grid_2 							{ width:160px; margin:0 20px 0 20px; overflow:hidden; float:left; display:inline; }
+.grid_2_right {
+  width: 75px;
+  margin: 0px 0px 0px 0px;
+  float: right;
+}
+h6.centered {
+  font-size: 11px;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: normal;
+  color: #bbb;
+  margin: 15px 0;
+}
+h6.centered a {
+  color: #666;
+  text-decoration: underline;
+}
+
+hr {
+  margin: 12px 0px 18px;
+}
+
+.tampa-img {
+  margin: 10px auto;
+  width: 307px;
+  display: table;
+
+  a {
+    background:url('../assets/Tampaweb1.jpg');
+    background-repeat:no-repeat;
+    width:307px;
+    height:307px;
+    float:left;
+
+    &:hover{
+      background:url('../assets/Tampaweb2.jpg');
+      cursor: pointer;
+    }
+  }
+}
+
+.PageNavigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation .next {
+  text-align: right;
+}
+
+.tampa-comments-img a{ background:url('../assets/Tampa2.jpg') ; background-repeat:no-repeat; float:left; width:450px; height:341px; text-align:left;}
+
+.tampa-comments-img a:hover{ background:url('../assets/Tampa1.jpg') ;  width:450px; height:341px; background-repeat:no-repeat; float:left; text-align:left;}
+
+.top_nav{ width:100%; float:left; margin:0px 0px 0px 0px}
+.top_nav ul{ list-style:none; float:left;margin: 11px 0px 36px 0px;}
+.top_nav ul li{ float:left; padding:0px 56px;}
+.top_nav ul li a{ text-decoration: none; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#666; font-weight:normal;}
+.top_nav ul li a:hover{ color:#ff5408}
+.top_div{ width:100%; float:left; margin:0px 0px 0px 0px}
+.top_div p{ font-size:12px; font-weight:bold; color:#333; text-transform:uppercase; border-bottom:1px solid #999999; width:100%; padding:0px 0px 20px 0px}
+.top_div ul{ list-style:none; float:left; margin:8px 0px 0px 0px }
+.top_div ul li{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#666; font-weight:normal; padding:0px 0px 17px 0px;}
+
+ .img_div{ width:100%; float:left; margin:0px 0px 0px 0px }
+ .img_div p{ text-align:center; border:0;}
+
+ .CV .post-content p { font-family:Arial, Helvetica, san-serif; font-size:12px; color:#666666; line-height: 1.6em; }
+
+.CV .post-content a{ font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-variant: normal; font-style: normal; font-weight: normal; color: #666; text-decoration: none;}
+
+.CV span.text{ font-family:Geneva, Arial, Helvetica, san-serif; font-size:12px; color:#0000FF;}
+
+.CV .exh  p { padding-left: 100px;}
+
+.CV .exh1  p { padding-left: 60px;}
+
+.CV blockquote, .CV blockquote p { line-height:1.6em;  }
+	.CV blockquote {
+		margin:0px 0 15px 0; padding:0 0 0 27px;
+		font-family: Georgia, Arial, sans-serif;
+	}
+
+  .Destinies table tr td{padding-left:0; padding-right:0; font-family: Arial, Helvetica, sans-serif; font-size:12px}
+
+  .Destinies table tr td img{width:54%; margin:0}
+
+  .Destinies p{ margin:10px; line-height:normal; font-family: Arial, Helvetica, sans-serif; font-size:12px}
+
+  .Destinies p em{color:#000}
+
+  .Destinies p a{text-decoration:none;}
+
+  .Destinies p a.Exhibitions{text-decoration:underline;}
+
+  .Destinies p span a{text-decoration:underline; font-size: x-small; color:#9999cc; font-weight:normal;  }
+
+  .Destinies p span a small{color:#FF0000; font-size:12px;}
+
+  .Destinies p span a:hover{color: #ff5408}
+
+  .Tribute{font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: left;}
+
+.Tribute table td{vertical-align:middle!important;}
+
+.Tribute table td p{font-family:Arial, Helvetica, sans-serif; display:block; font-size:12px; padding-bottom:14px}
+
+.Tribute table td p span{font-family: Arial, Helvetica, sans-serif; display:block; font-size:12px}
+
+.Tribute p{ margin-bottom:.0001pt; line-height:normal; font-family: Arial, Helvetica, sans-serif; font-size:12px; color:000!important}
+
+.Tribute p em{color:#000}
+
+.Tribute hr{margin:12px 0px 18px}
+
+.Tribute p small{ font-family:Arial, Helvetica, sans-serif;font-size:12px}
+
+.Tribute p small.top{padding-top:12px; display:block}
+
+.Tribute p span.friend{display:block; font-size:12px; font-family: Arial, Helvetica, sans-serif; padding-top:48px; padding-bottom:12px}
+
+.Tribute p a{text-decoration:none; color:#666; font-weight:normal;  }
+
+.Tribute p.exhibition{padding:12px 0px}
+
+.Tribute p span a:hover{color: #ff5408;}
+
+.Tribute p a:hover{color: #ff5408}
+
+.Tribute p small.top{ font-family:Arial, Helvetica, sans-serif;padding-top:12px; display:block}
+
+.Tribute p a small{color:#FF0000; font-size:12px;}
+
+.Efface .post-content p a{text-decoration:none; color:#666}
+
+.Efface .post-content p a.Exhibitions{text-decoration:underline; color:#666}
+
+.Efface .post-content p a:hover{color: #000}
+
+.Efface .post-content p{color:#000; font-size:12px; font-family: Arial, Helvetica, sans-serif; line-height:normal; margin-bottom:0}
+
+.Efface p small{font-size:12px; font-family: Arial, Helvetica, sans-serif;}
+
+.Efface p em{color:#000}
+
+.Efface{font-family:Arial, Helvetica, sans-serif; font-size: 12px; text-align: left;}
+
+.Efface table td{vertical-align:middle!important; padding:10px!important; text-align:left}
+
+.Efface hr{margin:12px 0px 18px}
+
+.Efface p small.top{padding:12px 0; display:block}
+
+.Efface table td p{ font-size:12px; font-family: Arial, Helvetica, sans-serif; text-align:left; line-height:normal}
+
+.Efface table td p a{text-decoration:underline; color:#9999cc}
+
+.Efface p a:hover{color: #ff5408}
+
+.Efface p.last{padding-bottom:11px}
+
+.Efface p span a{text-decoration:underline; font-size: x-small; color:#9999cc; font-weight:bold; padding:10px 0px; display:block }
+
+.Efface p span a:hover{color: #ff5408;}
+
+.page-id-808 p.first{font-size:12px; padding:10px 0px}
+
+.page-id-808 p{ margin-bottom:.0001pt; line-height:normal; font-family: Arial, Helvetica, sans-serif; font-size:12px; color:000!important; padding-bottom:10px}
+
+.page-id-808 p a{text-decoration:none; color:#666; display:block}
+
+.page-id-808 p a:hover{color: #ff5408}
+
+.page-id-808 p span a{text-decoration:underline; font-size:12px; color:#9999cc; font-weight:normal; padding:10px 0px; display:block; font-family: Arial, Helvetica, sans-serif;}
+
+.page-id-808 p span a small{color:#FF0000; font-size:12px;}
+
+.page-id-808 p span a:hover{color: #ff5408;}
+
+.page-id-808 p img{margin:10px 0px}
+
+.page-id-833 p{ margin:10px; width:100%; float:left; line-height:normal; font-family: Arial, Helvetica, sans-serif; font-size:12px}
+
+.page-id-833 table{margin:20px 0px!important}
+
+.page-id-19 .img2, .page-id-833 .img2{margin: 10px auto;width: 307px;display: table;}
+
+.page-id-19 .img2 a, .page-id-833 .img2 a{ background:url('images/Tampaweb1.jpg') ; background-repeat:no-repeat; width:307px; height:307px; float:left;}
+
+.page-id-19 .img2 a:hover,.page-id-833 .img2 a:hover{ background:url('images/Tampaweb2.jpg') ;  width:307px; height:307px; background-repeat:no-repeat;  float:left;}
+
+.page-id-833 table tr td{border:1px solid #999!important; font-size:12px; line-height:normal; font-family: Arial, Helvetica, sans-serif; font-size:12px; text-align:left}
+
+.page-id-833 p span{ font-family: Arial, Helvetica, sans-serif; font-size:12px}
+
+.page-id-833 p span a{text-decoration:underline; font-size: x-small; color:#9999cc; font-weight:normal;  }
+
+.page-id-833 p span a:hover{color: #ff5408;}
+
+.page-id-833 p a{text-decoration:none}
+
+.page-id-833 p a:hover{color: #ff5408}
+
+.page-id-833 p span a small{color:#FF0000; font-size:11px;}
+
+.Houses .post p{ margin:12px; line-height:normal; font-family: Arial, Helvetica, sans-serif; font-size:12px}
+
+.Houses .post p em{color: #000}
+
+.Houses table td {
+
+vertical-align: middle!important;
+
+text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size:12px;  line-height:normal;
+
+}
+
+.Houses p a{text-decoration:none; color:#2960; display:block}
+.Houses p a.Exhibitions{text-decoration:underline; color:#2960; display:block}
+.Houses p a:hover{color: #ff5408}
+
+.Houses p span a{text-decoration:underline; font-size: x-small; color:#9999cc; font-weight:normal;  }
+
+.Houses p span a small{color:#FF0000; font-size:12px;}
+
+.Premonitions table tr td{padding-left:0; padding-right:0; font-family:Arial, Helvetica, sans-serif; font-size:12px}
+
+.Premonitions table tr td img{width:47%; height:auto; margin:0}
+
+.Premonitions .post p{ margin:10px; line-height:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px}
+
+.Premonitions .post p a{text-decoration:none;}
+
+.Premonitions .post p span a{text-decoration:underline; font-size: x-small; color:#9999cc; font-weight:normal;  }
+
+.Premonitions .post p span a small{color:#FF0000; font-size:12px;}
+
+.Premonitions .post p span a:hover{color: #ff5408}
+
+
+.abjection{margin: 0 0 15px 0;line-height: 20px;font-size: 12px;font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/*--17-01-2014--*/
+.ungrt{ width:100%; float:left; margin:0px 0px 0px 0px;}
+ .ungrt .block{ width:100%;text-align: center;font-family: Arial, Helvetica, sans-serif;font-size: 12px; color:#fff;padding: 12px 0px;}
+ .ungrt .block1{ width:100%; min-height:40px;display: table;}
+ .ungrt .box{ float:left;padding:11px 60px 0px 60px;}
+ .ungrt .box2{ width:386px; float:left; text-align:center;margin: 0px 0px 12px 0px;}
+  .ungrt .box2 .inner{ width:100%; min-height:281px; float:left; margin:10px 0px 0px 0px;}
+ .txt{ width:100%; padding:12px 0px; float:left; background:#333333; height: 56px;}
+ .txt span{font-family: Arial, Helvetica, sans-serif;font-size: 12px; color:#fff; text-align:center;}
+
+ /*--21-01-2014--*/
+ .img-cntr{ text-align:center; padding: 10px 0;}
