@@ -1,2 +1,2 @@
 # mireille-eid
-Mireille Eid's website
+Artist Mireille Eid's website.
