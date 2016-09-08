@@ -333,6 +333,12 @@ a, input { outline: none; }
    }
 }
 
+@include media-query($on-palm) {
+  .homepage-identity, .mir {
+    position: relative;
+  }
+}
+
 /**** grey page header ****/
 
 .gray_stripe{ float:left; width:100%; background:#979797; margin:1px 0px 1px 0px }
