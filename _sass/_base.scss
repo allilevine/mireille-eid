@@ -336,6 +336,9 @@ a, input { outline: none; }
 @include media-query($on-palm) {
   .homepage-identity, .mir {
     position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
   }
 }
 
